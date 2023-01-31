@@ -1,8 +1,13 @@
+import Card from "./Card";
+
 function Exhibit() {
   return (
-    <main>
+    <article>
       <h2>Current data</h2>
-    </main>
+      <div class="exhibit-grid">
+        <Card />
+      </div>
+    </article>
   );
 }
 export default Exhibit;

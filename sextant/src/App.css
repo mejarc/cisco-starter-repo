@@ -1,0 +1,56 @@
+/* Variables */
+:root {
+  /* Light theme (default), based on Visual Studio Code Light theme, https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/light_vs.json */
+  --background: #fff;
+  --text: #000;
+  --secondary-text: #e5ebf1;
+  --visited: #6f6f6f;
+  --link: #90c2f9;
+
+  /* Dark theme, based on Monokai values listed at https://gist.github.com/r-malon/8fc669332215c8028697a0bbfbfbb32a. Thanks to @r-malon */
+  --background-dark: #2e2e2e;
+  --text-dark: #d6d6d6;
+  --secondary-text-dark: #797979;
+  --visited-dark: #e5b567;
+  --link-dark: #e87d3e;
+}
+
+a {
+  color: var(--link);
+}
+a:visited,
+a:hover {
+  color: var(--visited);
+}
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--link-dark);
+  }
+  a:visited,
+  a:hover {
+    color: var(--visited-dark);
+  }
+  body {
+    background: var(--background-dark);
+    color: var(--text-dark);
+  }
+}
+
+.App {
+  padding: 4rem;
+}
+.exhibit-grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+.card {
+  border-radius: 5px;
+  padding: 10px;
+}
